@@ -34,7 +34,7 @@
   --accent-hover:#2b7cff;
   --accent-ink:#ffffff;
   --ok:#35d07f;
-  --demo:#8b5cf6;
+  --demo:#5aa9ff;
   --font-display:"Inter","Helvetica Neue",Arial,sans-serif;
   --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
   --shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 18px 50px rgba(0,0,0,.55);
@@ -68,7 +68,7 @@ section{padding-block:clamp(32px,7vw,60px)}
 
 /* 1. Demo banner */
 .demobar{
-  background:linear-gradient(90deg,#4c1d95,#6d28d9);color:#fff;font-size:.76rem;font-weight:600;
+  background:#e8f1ff;color:#0b1b3a;font-size:.76rem;font-weight:600;
   letter-spacing:.02em;text-align:center;padding:7px 16px;line-height:1.35
 }
 
@@ -169,7 +169,7 @@ section{padding-block:clamp(32px,7vw,60px)}
 .review{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
 .samptag{
   display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--demo);border:1px solid currentColor;
+  text-transform:uppercase;color:var(--fg);border:1px solid rgba(255,255,255,.45);
   border-radius:999px;padding:2px 9px;margin-bottom:11px
 }
 .review q{display:block;font-size:.98rem;quotes:none}
@@ -310,7 +310,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .notesbtn{
   position:fixed;right:12px;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:60;
   font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
-  background:var(--demo);color:#fff;border:none;border-radius:999px;padding:9px 15px;
+  background:var(--demo);color:#06101f;border:none;border-radius:999px;padding:9px 15px;
   cursor:pointer;box-shadow:var(--shadow)
 }
 @media(min-width:760px){.notesbtn{bottom:14px}}
@@ -321,6 +321,7 @@ body.shownotes .note{
   padding:7px 11px;margin-bottom:14px;font-size:.76rem;line-height:1.45;color:var(--fg)
 }
 body.shownotes .note b{color:var(--demo)}
+.demobar .rslogo{filter:brightness(0);opacity:.7}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -332,7 +333,7 @@ body.shownotes .note b{color:var(--demo)}
 <header class="site-head">
   <div class="wrap head-row">
     <span class="logo"><span class="mark">SR</span>Summit Ridge Roofing</span>
-    <a class="btn btn-ghost" href="tel:+18175550142">(817) 555-0142</a>
+    <a class="btn btn-ghost" href="tel:+14706642152">(470) 664-2152</a>
     <a class="btn btn-accent" href="#estimate">Free Estimate</a>
   </div>
 </header>
@@ -340,9 +341,9 @@ body.shownotes .note b{color:var(--demo)}
 <section class="hero">
   <div class="ph-hero" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="note"><b>§2.1.3 Hero</b> — trust line, headline carrying the city, one-line subhead, ONE button, 3–4 trust ticks. Background is a placeholder; media team to supply 1600×900 WebP under 200 KB. No autoplay video.</div>
-    <p class="trustline">Licensed &amp; Insured · Serving Fort Worth &amp; Surrounding Areas</p>
-    <h1>Roof Repair &amp; Replacement in Fort Worth</h1>
+    <div class="note"><b>§2.1.3 Hero</b> — trust line, headline carrying the city, one-line subhead, ONE button, 3–4 trust ticks. Background placeholder; Samuel supplies 1920×1080 WebP under 200 KB (due today). No autoplay video.</div>
+    <p class="trustline">Licensed &amp; Insured · Serving Duluth &amp; Gwinnett County</p>
+    <h1>Roof Repair &amp; Replacement in Duluth, GA</h1>
     <p class="sub">Storm damage, leaks and full replacements. Free inspections, licensed and insured, and on your roof within days rather than weeks.</p>
     <a class="btn btn-accent btn-lg" href="#estimate">Get My Free Inspection</a>
     <ul class="ticks">
@@ -389,7 +390,7 @@ body.shownotes .note b{color:var(--demo)}
     <h2>What you get either way</h2>
     <ul class="why" style="margin-top:20px">
       <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Licensed and insured, with certificates available on request</span></li>
-      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Local crews who know Fort Worth weather and Fort Worth codes</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Local crews who know Duluth weather and Gwinnett County codes</span></li>
       <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Photographs of every problem, so you see what we see before deciding</span></li>
       <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A workmanship warranty in writing on every job</span></li>
     </ul>
@@ -398,7 +399,7 @@ body.shownotes .note b{color:var(--demo)}
 
 <section style="background:var(--surface-2)">
   <div class="wrap">
-    <div class="note"><b>§2.1.7 Gallery</b> — six images, AI-generated or licensed stock, WebP under 200 KB each, no text inside the image, no watermarks. Placeholders until the media team delivers.</div>
+    <div class="note"><b>§2.1.7 Gallery</b> — six images at 1200×900 from Samuel (due today), WebP under 200 KB each, no text inside the image, no watermarks.</div>
     <p class="eyebrow">Recent work</p>
     <h2>Roofs we have finished</h2>
     <div class="gallery" style="margin-top:20px">
@@ -414,9 +415,9 @@ body.shownotes .note b{color:var(--demo)}
     <p class="eyebrow">Reviews</p>
     <h2>What customers say</h2>
     <div class="grid grid-3" style="margin-top:22px">
-      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>They found the leak in ten minutes and had it patched the same afternoon. The photos they sent made it obvious what was wrong.</q><p class="who">M.R. · Fort Worth</p></div>
-      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>Hail took out half the roof. They handled the insurance paperwork and we had a new roof in under three weeks.</q><p class="who">D.T. · Keller</p></div>
-      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>Quoted, scheduled and finished in a week. The crew cleaned up so well you could not tell they had been there.</q><p class="who">A.P. · Arlington</p></div>
+      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>They found the leak in ten minutes and had it patched the same afternoon. The photos they sent made it obvious what was wrong.</q><p class="who">M.R. · Duluth</p></div>
+      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>Hail took out half the roof. They handled the insurance paperwork and we had a new roof in under three weeks.</q><p class="who">D.T. · Suwanee</p></div>
+      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>Quoted, scheduled and finished in a week. The crew cleaned up so well you could not tell they had been there.</q><p class="who">A.P. · Johns Creek</p></div>
     </div>
   </div>
 </section>
@@ -426,7 +427,7 @@ body.shownotes .note b{color:var(--demo)}
     <p class="eyebrow">Service area</p>
     <h2>Where we work</h2>
     <ul class="areas" style="margin-top:18px">
-      <li>Fort Worth</li><li>Arlington</li><li>Keller</li><li>Southlake</li><li>North Richland Hills</li><li>Mansfield</li><li>Burleson</li><li>Grapevine</li><li>Bedford</li><li>Euless</li>
+      <li>Duluth</li><li>Johns Creek</li><li>Suwanee</li><li>Peachtree Corners</li><li>Norcross</li><li>Lawrenceville</li><li>Berkeley Lake</li><li>Sugar Hill</li><li>Buford</li><li>Alpharetta</li>
     </ul>
   </div>
 </section>
@@ -467,7 +468,7 @@ body.shownotes .note b{color:var(--demo)}
       </div>
       <div class="field">
         <label for="f-phone">Phone <span class="req">*</span></label>
-        <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="(817) 555-0142" required>
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="(470) 664-2152" required>
       </div>
       <div class="field">
         <label for="f-email">Email <span class="req">*</span></label>
@@ -527,7 +528,7 @@ body.shownotes .note b{color:var(--demo)}
         </div>
         <div class="booked" id="booked" hidden></div>
 
-        <p style="margin-top:26px;font-size:.95rem">Would rather talk now? <a href="tel:+18175550142" style="font-weight:700;color:var(--accent)">(817) 555-0142</a></p>
+        <p style="margin-top:26px;font-size:.95rem">Would rather talk now? <a href="tel:+14706642152" style="font-weight:700;color:var(--accent)">(470) 664-2152</a></p>
         <button class="backlink" type="button" id="ty-back">Back to the landing page</button>
       </div>
 
@@ -546,14 +547,14 @@ body.shownotes .note b{color:var(--demo)}
 <footer>
   <div class="wrap">
     <strong>Summit Ridge Roofing</strong>
-    <p>(817) 555-0142 · Fort Worth, TX</p>
+    <p>(470) 664-2152 · Duluth, GA</p>
     <nav><a href="#estimate">Privacy Policy</a><a href="#estimate">Terms</a></nav>
     <p class="credit"><img class="rslogo" src="https://rocstarrmedia.com/assets/transparent-logo-cropped-800.webp" alt="RocStarr Media" onerror="this.remove()"><span>Demo by RocStarr Media. Summit Ridge Roofing is a fictional business created to demonstrate the customer experience.</span></p>
   </div>
 </footer>
 
 <div class="stickybar">
-  <a class="btn btn-call" href="tel:+18175550142">Call</a>
+  <a class="btn btn-call" href="tel:+14706642152">Call</a>
   <a class="btn btn-accent" href="#estimate">Free Estimate</a>
 </div>
 
@@ -593,8 +594,9 @@ body.shownotes .note b{color:var(--demo)}
     var meta   = document.getElementById('sms-meta');
     if (consent){
       var body = 'Hi ' + (first || 'there') + ', thanks for contacting Summit Ridge Roofing. '
-               + 'We got your request and will call you shortly. Book a time: '
-               + 'https://link.rocstarr.co/abcd123';
+               + "We'll call you shortly. Book now: "
+               + 'https://link.rocstarr.co/abcd123'
+               + ' Reply STOP to opt out.';
       bubble.textContent = body;
       meta.textContent = 'Delivered · W1 Instant Response · ' + body.length + ' characters';
     } else {
