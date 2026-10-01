@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Demo landing page built by RocStarr Media. Summit Ridge Roofing is a fictional business.">
+<style>
+  :root{color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:14px;background:#07070b}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>Summit Ridge Roofing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Layout: single mobile-first column widening to a 1080px shell.
+   Palette, type and radii taken from rocstarrmedia.com: near-black ground,
+   electric blue accent, warm off-white text, Inter. Committed single dark
+   look - a contractor's landing page should render identically for everyone. */
+:root{
+  --bg:#07070b;
+  --surface:#0d0d12;
+  --surface-2:#101017;
+  --raised:rgba(255,255,255,.04);
+  --fg:#faf8f5;
+  --fg-muted:rgba(250,248,245,.62);
+  --fg-dim:rgba(250,248,245,.42);
+  --line:rgba(255,255,255,.10);
+  --line-soft:rgba(255,255,255,.06);
+  --accent:#0062ff;
+  --accent-hover:#2b7cff;
+  --accent-ink:#ffffff;
+  --ok:#35d07f;
+  --demo:#8b5cf6;
+  --font-display:"Inter","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Inter","Helvetica Neue",Arial,sans-serif;
+  --shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 18px 50px rgba(0,0,0,.55);
+  --radius:4px;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.55;
+  margin:0;
+  padding-bottom:84px; /* clears the sticky mobile bar */
+}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1;letter-spacing:-.025em;font-weight:800}
+h1{font-size:clamp(2.05rem,6.4vw,3.35rem);font-weight:900;letter-spacing:-.035em}
+h2{font-size:clamp(1.45rem,4.2vw,2.15rem);font-weight:800}
+h3{font-size:1.06rem;font-weight:700;line-height:1.35;letter-spacing:-.012em}
+p{margin:0}
+a{color:inherit}
+
+.wrap{width:100%;max-width:1080px;margin-inline:auto;padding-inline:16px}
+section{padding-block:clamp(32px,7vw,60px)}
+.eyebrow{
+  font-family:var(--font-body);font-size:.72rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px
+}
+
+/* 1. Demo banner */
+.demobar{
+  background:linear-gradient(90deg,#4c1d95,#6d28d9);color:#fff;font-size:.76rem;font-weight:600;
+  letter-spacing:.02em;text-align:center;padding:7px 16px;line-height:1.35
+}
+
+/* 2. Header */
+.site-head{
+  background:rgba(7,7,11,.88);backdrop-filter:blur(10px);color:var(--fg);position:sticky;
+  top:env(safe-area-inset-top,0px);z-index:40;border-bottom:1px solid var(--line-soft)
+}
+.head-row{display:flex;align-items:center;gap:10px;min-height:60px;flex-wrap:wrap}
+.logo{
+  display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0;
+  font-size:1.06rem;font-weight:800;letter-spacing:-.02em
+}
+.logo .mark{
+  width:32px;height:32px;flex:none;border-radius:6px;display:grid;place-items:center;
+  background:var(--accent);color:var(--accent-ink);font-size:.72rem;font-weight:800;
+  font-family:var(--font-body);letter-spacing:.02em
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--font-body);font-weight:600;font-size:.95rem;letter-spacing:-.005em;
+  border-radius:4px;padding:12px 20px;border:1px solid transparent;transition:background .15s ease;
+  cursor:pointer;text-decoration:none;white-space:nowrap
+}
+.btn-accent{background:var(--accent);color:var(--accent-ink)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ghost{background:var(--raised);color:var(--fg);border-color:var(--line)}
+.btn-lg{font-size:1.06rem;padding:15px 26px;width:100%}
+@media(min-width:560px){.btn-lg{width:auto}}
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,button:focus-visible{
+  outline:3px solid var(--accent);outline-offset:2px
+}
+
+/* 3. Hero */
+.hero{background:var(--bg);color:var(--fg);position:relative;overflow:hidden;border-bottom:1px solid var(--line-soft)}
+.hero .ph-hero{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(900px 420px at 50% -10%, rgba(0,98,255,.22), transparent 70%),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.022) 0 14px,transparent 14px 28px),
+    linear-gradient(180deg,#0a0a12,#07070b);
+}
+.hero .wrap{position:relative}
+.trustline{
+  font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--fg-dim);margin-bottom:14px
+}
+.hero h1{margin-bottom:14px}
+.hero .sub{color:var(--fg-muted);max-width:46ch;margin-bottom:22px}
+.ticks{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px;padding:0;margin:20px 0 0}
+.ticks li{display:flex;align-items:center;gap:7px;font-size:.88rem;font-weight:600;color:var(--fg)}
+.ticks svg{flex:none}
+
+/* 4. Services */
+.grid{display:grid;gap:14px}
+@media(min-width:620px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;min-width:0
+}
+.card .ico{
+  width:38px;height:38px;border-radius:4px;background:var(--raised);
+  display:grid;place-items:center;margin-bottom:12px;color:var(--accent)
+}
+.card p{color:var(--fg-muted);font-size:.94rem;margin-top:6px}
+
+/* 5. How it works */
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:16px;counter-reset:s}
+@media(min-width:620px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{counter-increment:s;display:flex;gap:13px;align-items:flex-start;min-width:0}
+.steps li::before{
+  content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;
+  background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;
+  font-family:var(--font-display);font-weight:800;font-size:1.02rem
+}
+.steps p{color:var(--fg-muted);font-size:.94rem;margin-top:4px}
+
+/* 6. Why us */
+.why{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+@media(min-width:620px){.why{grid-template-columns:1fr 1fr}}
+.why li{display:flex;gap:10px;align-items:flex-start;font-size:.97rem}
+.why svg{flex:none;margin-top:3px;color:var(--ok)}
+
+/* 7. Gallery */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:620px){.gallery{grid-template-columns:repeat(3,1fr)}}
+.ph{
+  aspect-ratio:4/3;max-width:100%;border-radius:4px;border:1px dashed var(--line);
+  background:
+    repeating-linear-gradient(45deg,var(--surface-2) 0 10px,transparent 10px 20px),
+    var(--surface);
+  display:grid;place-items:center;text-align:center;padding:8px;
+  color:var(--fg-muted);font-size:.68rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;line-height:1.35
+}
+
+/* 8. Reviews */
+.review{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.samptag{
+  display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--demo);border:1px solid currentColor;
+  border-radius:999px;padding:2px 9px;margin-bottom:11px
+}
+.review q{display:block;font-size:.98rem;quotes:none}
+.review .who{margin-top:10px;font-size:.87rem;color:var(--fg-muted);font-weight:600}
+.stars{color:var(--accent);letter-spacing:2px;font-size:.9rem;margin-bottom:8px}
+
+/* 9. Service area */
+.areas{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.areas li{
+  background:var(--surface);border:1px solid var(--line);border-radius:999px;
+  padding:6px 14px;font-size:.88rem;font-weight:600
+}
+
+/* 10. FAQ */
+.faq{display:grid;gap:9px}
+@media(min-width:820px){.faq{grid-template-columns:1fr 1fr;gap:9px 18px;align-content:start}}
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+summary{
+  cursor:pointer;padding:15px 18px;font-weight:700;font-size:1rem;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;list-style:none
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;font-weight:400;color:var(--accent);line-height:1}
+details[open] summary::after{content:"\2212"}
+details .body{padding:0 18px 16px;color:var(--fg-muted);font-size:.95rem}
+
+/* 11. Final CTA + form */
+.cta{background:var(--surface);color:var(--fg);border-top:1px solid var(--line-soft)}
+.cta h2{margin-bottom:8px}
+.cta .lede{color:var(--fg-muted);margin-bottom:22px;max-width:44ch}
+.cta-grid{display:grid;gap:26px;align-items:start}
+@media(min-width:820px){
+  .cta-grid{grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:52px}
+}
+.cta-aside{min-width:0}
+.next{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px;counter-reset:n}
+.next li{counter-increment:n;display:flex;gap:12px;align-items:flex-start;min-width:0}
+.next li::before{
+  content:counter(n);flex:none;width:28px;height:28px;border-radius:50%;
+  background:var(--raised);color:var(--fg);border:1px solid var(--line);display:grid;place-items:center;
+  font-family:var(--font-display);font-weight:800;font-size:.92rem
+}
+.next strong{display:block;font-size:.97rem;color:var(--fg)}
+.next span{font-size:.89rem;color:var(--fg-muted)}
+.formcard{
+  background:var(--surface);color:var(--fg);border-radius:6px;padding:20px;
+  box-shadow:var(--shadow);max-width:100%
+}
+.field{display:grid;gap:6px;margin-bottom:14px}
+label{font-size:.85rem;font-weight:700;letter-spacing:.01em}
+.req{color:var(--accent)}
+input[type=text],input[type=tel],input[type=email],select{
+  font:inherit;font-size:1rem;padding:12px 13px;border:1px solid var(--line);
+  border-radius:8px;background:var(--bg);color:var(--fg);width:100%;min-width:0
+}
+.radios{display:grid;gap:8px}
+@media(min-width:460px){.radios{grid-template-columns:1fr 1fr}}
+.radio{
+  display:flex;gap:9px;align-items:center;border:1px solid var(--line);
+  border-radius:4px;padding:11px 12px;font-size:.94rem;cursor:pointer;background:var(--bg)
+}
+.radio input{accent-color:var(--accent);flex:none;margin:0}
+.consent{
+  display:flex;gap:11px;align-items:flex-start;border-top:1px solid var(--line);
+  padding-top:14px;margin-top:4px
+}
+.consent input{margin-top:3px;flex:none;width:19px;height:19px;accent-color:var(--accent)}
+.consent span{font-size:.78rem;line-height:1.45;color:var(--fg-muted)}
+.formnote{font-size:.78rem;color:var(--fg-muted);margin-top:11px;text-align:center}
+.sent{
+  background:var(--surface);border:1px solid var(--ok);border-left:4px solid var(--ok);
+  border-radius:var(--radius);padding:16px 18px;margin-top:14px;color:var(--fg);font-size:.93rem
+}
+
+/* 12. Footer */
+footer{background:var(--bg);color:var(--fg-muted);font-size:.86rem;border-top:1px solid var(--line-soft)}
+footer .wrap{display:grid;gap:12px;padding-block:28px}
+footer strong{color:var(--fg);font-size:1.05rem;font-weight:800;letter-spacing:-.015em}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer a{text-decoration:underline;text-underline-offset:3px}
+
+/* Sticky mobile bar */
+.stickybar{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:9px;
+  background:var(--surface);border-top:1px solid var(--line);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+  box-shadow:0 -6px 24px rgba(0,0,0,.6)
+}
+.stickybar .btn{flex:1;padding-block:13px}
+.btn-call{background:var(--surface-2);color:var(--fg);border-color:var(--line)}
+@media(min-width:760px){.stickybar{display:none}body{padding-bottom:0}}
+
+/* RocStarr brand lockups (demo banner + footer credit only - never the header) */
+.rslogo{height:15px;width:auto;display:block;flex:none;filter:brightness(0) invert(1)}
+.demobar{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.demobar .rslogo{height:13px}
+.credit{display:flex;align-items:center;gap:8px;flex-wrap:wrap;opacity:.75;font-size:.82rem}
+.credit .rslogo{height:14px;opacity:.9}
+
+/* Thank-you view */
+.ty{background:var(--surface);min-height:60vh;border-top:1px solid var(--line-soft)}
+.ty-grid{display:grid;gap:26px;align-items:start}
+@media(min-width:820px){.ty-grid{grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:48px}}
+.ty h1{font-size:clamp(1.7rem,6vw,2.6rem);margin-bottom:12px}
+.ty .lede{color:var(--fg-muted);font-size:1.05rem;margin-bottom:6px}
+
+.phone{
+  background:#000;border:1px solid var(--line);border-radius:18px;padding:16px 14px 20px;
+  box-shadow:var(--shadow);max-width:340px;margin-inline:auto;width:100%
+}
+
+.phone .bar{
+  color:var(--fg-dim);font-size:.68rem;text-align:center;margin-bottom:12px;
+  letter-spacing:.06em;text-transform:uppercase
+}
+.bubble{
+  background:#1c1c24;color:var(--fg);border-radius:14px 14px 14px 4px;
+  padding:12px 14px;font-size:.88rem;line-height:1.45
+}
+.bubble + .meta{color:var(--fg-dim);font-size:.67rem;margin-top:7px;padding-left:4px}
+.slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));gap:9px;margin-top:14px}
+.slot{
+  border:1px solid var(--line);background:var(--surface);border-radius:4px;
+  padding:11px 8px;text-align:center;font-size:.88rem;font-weight:600;cursor:pointer;color:var(--fg)
+}
+.slot[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface))}
+.booked{
+  margin-top:14px;border-left:4px solid var(--ok);background:var(--surface);
+  border:1px solid var(--ok);border-radius:var(--radius);padding:14px 16px;font-size:.92rem
+}
+.backlink{
+  display:inline-block;margin-top:24px;font-size:.88rem;font-weight:600;
+  color:var(--fg-muted);text-decoration:underline;text-underline-offset:3px;
+  background:none;border:none;cursor:pointer;padding:0;font-family:inherit
+}
+
+/* Build-notes overlay for review */
+.notesbtn{
+  position:fixed;right:12px;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:60;
+  font-size:.74rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  background:var(--demo);color:#fff;border:none;border-radius:999px;padding:9px 15px;
+  cursor:pointer;box-shadow:var(--shadow)
+}
+@media(min-width:760px){.notesbtn{bottom:14px}}
+.note{display:none}
+body.shownotes .note{
+  display:block;background:color-mix(in srgb,var(--demo) 12%,var(--surface));
+  border-left:3px solid var(--demo);border-radius:0 6px 6px 0;
+  padding:7px 11px;margin-bottom:14px;font-size:.76rem;line-height:1.45;color:var(--fg)
+}
+body.shownotes .note b{color:var(--demo)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="demobar"><img class="rslogo" src="https://rocstarrmedia.com/assets/transparent-logo-cropped-800.webp" alt="" aria-hidden="true" onerror="this.remove()"><span>Demo site built by RocStarr Media · See what your customers would experience.</span></div>
+
+<div id="site">
+<header class="site-head">
+  <div class="wrap head-row">
+    <span class="logo"><span class="mark">SR</span>Summit Ridge Roofing</span>
+    <a class="btn btn-ghost" href="tel:+18175550142">(817) 555-0142</a>
+    <a class="btn btn-accent" href="#estimate">Free Estimate</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="ph-hero" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="note"><b>§2.1.3 Hero</b> — trust line, headline carrying the city, one-line subhead, ONE button, 3–4 trust ticks. Background is a placeholder; media team to supply 1600×900 WebP under 200 KB. No autoplay video.</div>
+    <p class="trustline">Licensed &amp; Insured · Serving Fort Worth &amp; Surrounding Areas</p>
+    <h1>Roof Repair &amp; Replacement in Fort Worth</h1>
+    <p class="sub">Storm damage, leaks and full replacements. Free inspections, licensed and insured, and on your roof within days rather than weeks.</p>
+    <a class="btn btn-accent btn-lg" href="#estimate">Get My Free Inspection</a>
+    <ul class="ticks">
+      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Licensed &amp; Insured</li>
+      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free Inspections</li>
+      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Local Crews</li>
+      <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Workmanship Warranty</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="note"><b>§2.1.4 Services</b> — 4–6 cards, each an icon or photo, a name and a one-line benefit. Icons are inline SVG, so they cost nothing against the PageSpeed budget.</div>
+    <p class="eyebrow">What we do</p>
+    <h2>Roofing work, done properly</h2>
+    <div class="grid grid-3" style="margin-top:22px">
+      <div class="card"><div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2 9 10 3l8 6v8H2V9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div><h3>Roof Repair</h3><p>Leaks, missing shingles and flashing fixed fast, often the same week.</p></div>
+      <div class="card"><div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2 8.5 10 2.5l8 6M4 10v7h12v-7" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div><h3>Roof Replacement</h3><p>A full tear-off and rebuild, finished in a day or two on most homes.</p></div>
+      <div class="card"><div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M11 2 4 11h5l-1 7 7-9h-5l1-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h3>Storm &amp; Hail Damage</h3><p>We document the damage and work alongside your insurance claim.</p></div>
+      <div class="card"><div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.7"/><path d="m13.5 13.5 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><h3>Free Inspections</h3><p>A full roof check with photos, and an honest repair-or-replace answer.</p></div>
+      <div class="card"><div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 6h14v3H3zM5 9v6M15 9v6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div><h3>Gutters</h3><p>Guttering fitted or replaced at the same time as the roof.</p></div>
+      <div class="card"><div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 17V6h7v11M10 17V9h7v8M5.5 9h2M5.5 12h2M12.5 12h2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h3>Commercial Roofing</h3><p>Flat and low-slope systems for shops, offices and warehouses.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface-2)">
+  <div class="wrap">
+    <div class="note"><b>§2.1.5 How it works</b> — exactly three steps: Request → We call and visit → Job done. Step 2 is where the instant text-back gets sold to the contractor watching the demo.</div>
+    <p class="eyebrow">How it works</p>
+    <h2>Three steps, no chasing</h2>
+    <ol class="steps" style="margin-top:22px">
+      <li><div><h3>Request your inspection</h3><p>One short form. Under a minute.</p></div></li>
+      <li><div><h3>We call and come out</h3><p>A text lands within seconds, a call follows fast, then a full roof check with photos.</p></div></li>
+      <li><div><h3>The job gets done</h3><p>A clear written price, a scheduled date, and a warranty when we finish.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Why us</p>
+    <h2>What you get either way</h2>
+    <ul class="why" style="margin-top:20px">
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Licensed and insured, with certificates available on request</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Local crews who know Fort Worth weather and Fort Worth codes</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Photographs of every problem, so you see what we see before deciding</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 4.5 6.2 11.5 3 8.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A workmanship warranty in writing on every job</span></li>
+    </ul>
+  </div>
+</section>
+
+<section style="background:var(--surface-2)">
+  <div class="wrap">
+    <div class="note"><b>§2.1.7 Gallery</b> — six images, AI-generated or licensed stock, WebP under 200 KB each, no text inside the image, no watermarks. Placeholders until the media team delivers.</div>
+    <p class="eyebrow">Recent work</p>
+    <h2>Roofs we have finished</h2>
+    <div class="gallery" style="margin-top:20px">
+      <div class="ph">Image<br>placeholder 1</div><div class="ph">Image<br>placeholder 2</div><div class="ph">Image<br>placeholder 3</div>
+      <div class="ph">Image<br>placeholder 4</div><div class="ph">Image<br>placeholder 5</div><div class="ph">Image<br>placeholder 6</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="note"><b>§2.1.8 Reviews</b> — every card carries a visible "Sample review" label. Initials only, no photographs of real people, no invented statistics and no award badges.</div>
+    <p class="eyebrow">Reviews</p>
+    <h2>What customers say</h2>
+    <div class="grid grid-3" style="margin-top:22px">
+      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>They found the leak in ten minutes and had it patched the same afternoon. The photos they sent made it obvious what was wrong.</q><p class="who">M.R. · Fort Worth</p></div>
+      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>Hail took out half the roof. They handled the insurance paperwork and we had a new roof in under three weeks.</q><p class="who">D.T. · Keller</p></div>
+      <div class="review"><span class="samptag">Sample review</span><div class="stars" aria-label="5 out of 5">★★★★★</div><q>Quoted, scheduled and finished in a week. The crew cleaned up so well you could not tell they had been there.</q><p class="who">A.P. · Arlington</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface-2)">
+  <div class="wrap">
+    <p class="eyebrow">Service area</p>
+    <h2>Where we work</h2>
+    <ul class="areas" style="margin-top:18px">
+      <li>Fort Worth</li><li>Arlington</li><li>Keller</li><li>Southlake</li><li>North Richland Hills</li><li>Mansfield</li><li>Burleson</li><li>Grapevine</li><li>Bedford</li><li>Euless</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="note"><b>§2.1.10 FAQ</b> — five questions a homeowner actually asks a roofer. The insurance answer deliberately promises nothing an insurer might not honour.</div>
+    <p class="eyebrow">Questions</p>
+    <h2>Before you call</h2>
+    <div class="faq" style="margin-top:20px">
+      <details><summary>Will my insurance cover a new roof?</summary><div class="body">Often, if the damage came from a storm. We inspect, photograph everything and hand you the documentation for your claim. We do not file the claim for you, and we cannot promise what an insurer will decide.</div></details>
+      <details><summary>Should I repair or replace?</summary><div class="body">It depends on the age of the roof and how far the damage spreads. A roof in its last few years is usually cheaper to replace than to keep patching. We tell you either way after the inspection.</div></details>
+      <details><summary>How long does a replacement take?</summary><div class="body">Most homes are a one- or two-day job once the materials arrive.</div></details>
+      <details><summary>Is the inspection really free?</summary><div class="body">Yes, and there is no obligation afterwards.</div></details>
+      <details><summary>What warranty do I get?</summary><div class="body">A workmanship warranty from us in writing, plus the manufacturer's warranty on the materials.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="estimate">
+  <div class="wrap">
+    <div class="note" style="color:var(--fg)"><b>§2.2 Form</b> — five visible fields plus consent. "Insurance claim?" appears only when Storm damage is chosen, which keeps the visible count at five for most visitors. Consent starts unchecked; unchecked means email only, never SMS.</div>
+    <div class="cta-grid">
+    <div class="cta-aside">
+    <p class="eyebrow">Free inspection</p>
+    <h2>Get your free roof inspection</h2>
+    <p class="lede">Tell us what is going on and we will text you straight back.</p>
+    <ol class="next">
+      <li><div><strong>A text within seconds</strong><span>Not tomorrow, not after the weekend. Straight away.</span></div></li>
+      <li><div><strong>A call inside five minutes</strong><span>From someone who can actually answer questions about your roof.</span></div></li>
+      <li><div><strong>An inspection on a day that suits you</strong><span>Book it yourself on the next screen, or we will find a time on the call.</span></div></li>
+    </ol>
+    </div>
+    <form class="formcard" id="estimate-form" novalidate>
+      <div class="field">
+        <label for="f-first">First name <span class="req">*</span></label>
+        <input type="text" id="f-first" name="first_name" autocomplete="given-name" required>
+      </div>
+      <div class="field">
+        <label for="f-phone">Phone <span class="req">*</span></label>
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="(817) 555-0142" required>
+      </div>
+      <div class="field">
+        <label for="f-email">Email <span class="req">*</span></label>
+        <input type="email" id="f-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-zip">ZIP code <span class="req">*</span></label>
+        <input type="text" id="f-zip" name="zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" required>
+      </div>
+      <div class="field">
+        <span id="need-label" style="font-size:.85rem;font-weight:700">What do you need? <span class="req">*</span></span>
+        <div class="radios" role="radiogroup" aria-labelledby="need-label">
+          <label class="radio"><input type="radio" name="need" id="need-leak" value="Leak or repair">Leak or repair</label>
+          <label class="radio"><input type="radio" name="need" id="need-replace" value="Replacement">Replacement</label>
+          <label class="radio"><input type="radio" name="need" id="need-storm" value="Storm damage">Storm damage</label>
+          <label class="radio"><input type="radio" name="need" id="need-inspect" value="Inspection">Inspection</label>
+        </div>
+      </div>
+      <div class="field" id="ins-wrap" hidden>
+        <span id="ins-label" style="font-size:.85rem;font-weight:700">Is this an insurance claim? <span class="req">*</span></span>
+        <div class="radios" role="radiogroup" aria-labelledby="ins-label">
+          <label class="radio"><input type="radio" name="insurance" id="ins-yes" value="Yes">Yes</label>
+          <label class="radio"><input type="radio" name="insurance" id="ins-no" value="No">No</label>
+        </div>
+      </div>
+      <label class="consent" for="f-consent">
+        <input type="checkbox" id="f-consent" name="sms_consent">
+        <span>By checking this box, I agree to receive text messages from Summit Ridge Roofing about my request, including appointment reminders and follow-ups. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our Privacy Policy and Terms.</span>
+      </label>
+      <button class="btn btn-accent btn-lg" type="submit" style="margin-top:16px">Get My Free Inspection</button>
+      <p class="formnote">Mockup only — nothing is submitted or stored.</p>
+    </form>
+    </div>
+  </div>
+</section>
+
+</div><!-- /#site -->
+
+<section class="ty" id="ty" hidden>
+  <div class="wrap">
+    <div class="note"><b>§2.3 Thank-you page</b> — headline uses the first name with a "Hi there" fallback, states the text is coming, embeds the booking calendar, and carries a click-to-call. The phone mock shows the contractor the exact SMS their customer receives.</div>
+    <div class="ty-grid">
+      <div>
+        <p class="eyebrow">Request received</p>
+        <h1 id="ty-head">Got it! Check your phone.</h1>
+        <p class="lede" id="ty-sub">You'll get a text from us in the next minute.</p>
+
+        <h3 style="margin-top:28px">Want to lock in a time now?</h3>
+        <p style="color:var(--fg-muted);font-size:.93rem;margin-top:4px">Free inspection, 30 minutes, no obligation.</p>
+        <div class="slots" id="slots">
+          <button class="slot" type="button" aria-pressed="false">Thu 8:00 AM</button>
+          <button class="slot" type="button" aria-pressed="false">Thu 11:30 AM</button>
+          <button class="slot" type="button" aria-pressed="false">Fri 9:00 AM</button>
+          <button class="slot" type="button" aria-pressed="false">Fri 2:00 PM</button>
+          <button class="slot" type="button" aria-pressed="false">Sat 9:30 AM</button>
+          <button class="slot" type="button" aria-pressed="false">Sat 11:00 AM</button>
+        </div>
+        <div class="booked" id="booked" hidden></div>
+
+        <p style="margin-top:26px;font-size:.95rem">Would rather talk now? <a href="tel:+18175550142" style="font-weight:700;color:var(--accent)">(817) 555-0142</a></p>
+        <button class="backlink" type="button" id="ty-back">Back to the landing page</button>
+      </div>
+
+      <div>
+        <div class="phone">
+          <p class="bar">Messages · now</p>
+          <div class="bubble" id="sms-preview"></div>
+          <p class="meta" id="sms-meta">Delivered</p>
+        </div>
+        <p style="text-align:center;font-size:.78rem;color:var(--fg-muted);margin-top:12px">What your customer sees, seconds after submitting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Summit Ridge Roofing</strong>
+    <p>(817) 555-0142 · Fort Worth, TX</p>
+    <nav><a href="#estimate">Privacy Policy</a><a href="#estimate">Terms</a></nav>
+    <p class="credit"><img class="rslogo" src="https://rocstarrmedia.com/assets/transparent-logo-cropped-800.webp" alt="RocStarr Media" onerror="this.remove()"><span>Demo by RocStarr Media. Summit Ridge Roofing is a fictional business created to demonstrate the customer experience.</span></p>
+  </div>
+</footer>
+
+<div class="stickybar">
+  <a class="btn btn-call" href="tel:+18175550142">Call</a>
+  <a class="btn btn-accent" href="#estimate">Free Estimate</a>
+</div>
+
+<button class="notesbtn" id="notes-toggle" type="button" aria-pressed="false">Build notes</button>
+
+<script>
+(function(){
+  var need = document.querySelectorAll('input[name="need"]');
+  var insWrap = document.getElementById('ins-wrap');
+  for (var i=0;i<need.length;i++){
+    need[i].addEventListener('change', function(e){
+      var storm = e.target.value === 'Storm damage';
+      insWrap.hidden = !storm;
+      if (!storm){
+        var y=document.getElementById('ins-yes'), n=document.getElementById('ins-no');
+        y.checked=false; n.checked=false;
+      }
+    });
+  }
+
+  var form = document.getElementById('estimate-form');
+  var site = document.getElementById('site');
+  var ty   = document.getElementById('ty');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var first = (document.getElementById('f-first').value || '').trim();
+    var consent = document.getElementById('f-consent').checked;
+
+    document.getElementById('ty-head').textContent =
+      first ? ('Got it, ' + first + '! Check your phone.') : 'Got it! Check your phone.';
+    document.getElementById('ty-sub').textContent = consent
+      ? "You'll get a text from us in the next minute."
+      : "We've emailed you a confirmation. You didn't opt in to texts, so we won't send any.";
+
+    var bubble = document.getElementById('sms-preview');
+    var meta   = document.getElementById('sms-meta');
+    if (consent){
+      var body = 'Hi ' + (first || 'there') + ', thanks for contacting Summit Ridge Roofing. '
+               + 'We got your request and will call you shortly. Book a time: '
+               + 'https://link.rocstarr.co/abcd123';
+      bubble.textContent = body;
+      meta.textContent = 'Delivered · W1 Instant Response · ' + body.length + ' characters';
+    } else {
+      bubble.textContent = 'No text sent. This contact did not tick the consent box, so W1 sends the email only.';
+      meta.textContent = 'W1 Instant Response · SMS branch skipped';
+    }
+
+    site.hidden = true;
+    ty.hidden = false;
+    window.scrollTo(0,0);
+  });
+
+  document.getElementById('ty-back').addEventListener('click', function(){
+    ty.hidden = true;
+    site.hidden = false;
+    document.getElementById('estimate').scrollIntoView();
+  });
+
+  var booked = document.getElementById('booked');
+  var slots = document.getElementById('slots').querySelectorAll('.slot');
+  for (var s=0;s<slots.length;s++){
+    slots[s].addEventListener('click', function(ev){
+      for (var j=0;j<slots.length;j++) slots[j].setAttribute('aria-pressed','false');
+      ev.currentTarget.setAttribute('aria-pressed','true');
+      booked.innerHTML = '<strong>Booked for ' + ev.currentTarget.textContent + '.</strong><br>'
+        + 'Confirmation SMS and email go out now, the opportunity moves to Estimate Booked, '
+        + 'the nurture sequence stops, and reminders are queued for 24 hours and 2 hours before.';
+      booked.hidden = false;
+    });
+  }
+
+  var btn = document.getElementById('notes-toggle');
+  btn.addEventListener('click', function(){
+    var on = document.body.classList.toggle('shownotes');
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.textContent = on ? 'Hide notes' : 'Build notes';
+  });
+})();
+</script>
+
+</body>
+</html>
